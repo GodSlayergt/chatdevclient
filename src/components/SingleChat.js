@@ -26,7 +26,7 @@ import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
 import Picker from "emoji-picker-react";
 
-const ENDPOINT = "https://ChatDev-tpvn.onrender.com/";
+const ENDPOINT = process.env.REACT_APP_BASE_API_URI;
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {

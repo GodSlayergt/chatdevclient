@@ -1,0 +1,1 @@
+ChatDevClient is the UI interface of the ChatDev which helps you communicate with your friends in realtime. It has features like creating a group,searching a user , one to one chat , signup, login and logout funtionality.

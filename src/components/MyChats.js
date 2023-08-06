@@ -13,7 +13,6 @@ const MyChats = ({ fetchAgain }) => {
   const toast = useToast();
 
   const fetchChats = async () => {
-    // console.log(user._id);
     try {
       const config = {
         headers: {
@@ -99,7 +98,7 @@ const MyChats = ({ fetchAgain }) => {
                 py={2}
                 mb={2}
                 h="60px"
-                key={chat._id}
+                key={chat?._id}
                 _hover={{
                   boxShadow:
                     "inset -5px -5px 11px #bebebe,inset 5px 5px 11px #ffffff",
