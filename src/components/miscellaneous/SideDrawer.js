@@ -34,7 +34,7 @@ import { getSender } from "../../config/ChatLogics";
 import { Effect } from "react-notification-badge";
 import NotificationBadge from "react-notification-badge";
 
-const SideDrawer = () => {
+const SideDrawer = ({setFetchAgain}) => {
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -46,6 +46,7 @@ const SideDrawer = () => {
     setChats,
     notification,
     setNotification,
+    setUser
   } = ChatState();
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -53,6 +54,10 @@ const SideDrawer = () => {
 
   const logoutHandler = () => {
     localStorage.removeItem("userInfo");
+    setSelectedChat(null)
+    setChats([])
+    setUser(null)
+    setFetchAgain(false)
     history.push("/");
   };
   const handleSearch = async () => {

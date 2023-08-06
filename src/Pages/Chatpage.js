@@ -11,7 +11,7 @@ const Chatpage = () => {
 
   return (
     <div style={{ width: "100%" }}>
-      {user && <SideDrawer />}
+      {user && <SideDrawer setFetchAgain={setFetchAgain} />}
       <Box
         display="flex"
         justifyContent="space-between"
